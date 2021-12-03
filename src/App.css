@@ -1,38 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+body {
+  padding: 0;
+  margin: 0;
+}
+body * {
+  font-family: 'Alata', sans-serif;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
+  justify-content: center;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  background-color: #e7e7e7;
+  background-size: 48px 48px;
+  background-image: radial-gradient(
+      transparent 20px,
+      #ffffff 20px,
+      #ffffff 24px,
+      transparent 24px
+  ),
+  radial-gradient(
+      transparent 20px,
+      #ffffff 20px,
+      #ffffff 24px,
+      transparent 24px
+  );
+  background-position: 0 0 , 24px 24px;
+}
+.male {
+  background-color: #d5e6ff;
+}
+.female {
+  background-color: #f5e7ff;
+}
+.card {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+}
+.cardrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.form {
+  margin: 20px;
+}
+.inputcont {
+  box-shadow: 0 0 7px rgba(0,0,0,0.4);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 50px;
+  display: flex;
+  border: solid 1px #bbb;
+}
+.input {
+  border-radius: 50px;
+  background: white;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  border: none;
+  text-transform: capitalize;
+}
+.btn {
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  background: #699f58;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.input:focus, .btn:focus {
+  outline: none;
+}
+.gender span {
+  font-size: 200px;
+}
+.clear {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

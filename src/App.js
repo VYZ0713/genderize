@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Form from './components/form';
+import Gender from './components/gender';
 
 function App() {
+
+  const [gender, setgender] = useState();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={gender ? (gender === 'male') ? 'male App' : 'female App' : 'App'}>
+      <Form set={setgender} />
+      <Gender is={gender} />
+      {
+        gender ? <button className='clear' onClick={() => {setgender(undefined);}}>Clear</button> : null
+      }
     </div>
   );
 }
